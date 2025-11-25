@@ -13,7 +13,6 @@ class TodoListScreen extends StatefulWidget {
 enum StatusTugas { tugasBaru, dalamProses, selesai }
 
 class _TodoListScreenState extends State<TodoListScreen> {
-  // ✅ PRIVATE + NAMA + LIST<STRING>
   List<String> _tugas_arta = [];
   List<StatusTugas> _status_arta = [];
   List<bool> _selesai_arta = [];
@@ -34,7 +33,6 @@ class _TodoListScreenState extends State<TodoListScreen> {
         _selesai_arta = List<bool>.from(data['selesai'] as List);
       });
     } else {
-      // ✅ 3 item default
       setState(() {
         _tugas_arta = [
           'Belajar Flutter',
@@ -162,7 +160,6 @@ class _TodoListScreenState extends State<TodoListScreen> {
               ),
               const SizedBox(height: 16),
 
-              // ✅ KANBAN BOARD (3 Kolom)
               Expanded(
                 child: Row(
                   children: [
@@ -212,13 +209,11 @@ class _TodoListScreenState extends State<TodoListScreen> {
                     margin: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
                     child: ListTile(
                       contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                      // ✅ Checkbox (opsional)
                       leading: Checkbox(
                         value: _selesai_arta[idx],
                         onChanged: (value) => _toggleSelesai(idx, value),
                         activeColor: Colors.green,
                       ),
-                      // ✅ ListTile dengan teks (List<String>)
                       title: Text(
                         _tugas_arta[idx],
                         style: TextStyle(
@@ -229,7 +224,6 @@ class _TodoListScreenState extends State<TodoListScreen> {
                               : TextDecoration.none,
                         ),
                       ),
-                      // ✅ TRAILING: 1 icon saja (aman dari error layout)
                       trailing: SizedBox(
                         width: 70,
                         child: Row(
