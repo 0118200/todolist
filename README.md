@@ -1,10 +1,17 @@
 # todolist
 
-A new Flutter project.
+At the time we work, we must have schedule to remember our schedule. And because that, we build an APK for To-Do-List, we can list our work, or schedule to finish that, and then we can easily management our time too
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+U can used this program or apk for your requirements, for work, task, or anything else. U just copy this code or u can download ZIP or git clone to had a TODOLIST
+
+## Specifications
+
+OS : Windows  
+Program Language : Dart  
+IDE : VSCODE
+
 
 A few resources to get you started if this is your first Flutter project:
 
